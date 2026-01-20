@@ -8,21 +8,22 @@
     <link rel="shortcut icon" href="img/Ilustration.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="box">
+    <section class="box" data-aos="fade-up">
         <div class="box-img">
             <img src="img/Ilustration.svg" alt="Trilhas NOVAS">
         </div>
         <div class="box-descricao">
             <h1>Seja Bem-Vindo(a)!</h1>
             <p>Programa de Formação de Jovens e Adultos na Área de Tecnologia.</p>
-            <a id="cadastro" href="cadastro.html">Cadastra-se</a>
+            <a id="cadastro" href="./page/cadastro.html">Cadastra-se</a>
         </div>
     </section>
 
-    <section class="box-login">
+    <section class="box-login" data-aos="fade-down">
     
             <div class="text-title">
                 <h1>Faça seu Login</h1>
@@ -58,6 +59,9 @@
 
     <script src="https://kit.fontawesome.com/091f30ca3a.js" crossorigin="anonymous"></script>
     <script src="js/login.js"></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

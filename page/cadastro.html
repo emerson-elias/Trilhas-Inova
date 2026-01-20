@@ -4,46 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="shortcut icon" href="img/Ilustration.svg">
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="shortcut icon" href="../img/Ilustration.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="box-form">
+    <section class="box-form" data-aos="fade-in" data-aos-duration="1000">
 
-        <div class="icon-voltar" onclick="window.location.href='index.html'">
+        <div class="icon-voltar" onclick="window.location.href='../index.html'" data-aos="fade-right" data-aos-delay="200">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256"><path fill="currentColor" d="M220 128a4 4 0 0 1-4 4H49.66l65.17 65.17a4 4 0 0 1-5.66 5.66l-72-72a4 4 0 0 1 0-5.66l72-72a4 4 0 0 1 5.66 5.66L49.66 124H216a4 4 0 0 1 4 4"/></svg>
             <h2>Voltar</h2>
         </div>
 
-        <div class="text-title">
+        <div class="text-title" data-aos="fade-down" data-aos-delay="300">
             <h1>Formulário de Inscrição</h1>
             <p>Preencha os dados abaixo para fazer sua inscrição no Programa Trilhas.</p>
         </div>
 
         <form>
-            <h2>Informações do Participante</h2>
+            <h2 data-aos="fade-right" data-aos-delay="400">Informações do Participante</h2>
 
-            <div class="form-grupo">
+            <div class="form-grupo" data-aos="fade-up" data-aos-delay="100">
                 <label for="nome">Nome completo:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required onkeyup="this.value=formatarTexto(this.value)">
             </div>
     
-            <div class="form-grupo">
+            <div class="form-grupo" data-aos="fade-up" data-aos-delay="150">
                 <label for="data_nascimento">Data de nascimento:</label>
                 <input type="date" id="data_nascimento" name="data_nascimento" required min="1900-01-01" max="2099-12-31">
                 <span class="mensagem-erro" id="errorData"></span>
             </div>
     
-            <div class="form-grupo">
+            <div class="form-grupo" data-aos="fade-up" data-aos-delay="200">
                 <label for="cpf">CPF:</label>
                 <input type="text" id="cpf" name="cpf" placeholder="xxx.xxx.xxx-xx" required maxlength="14" onkeyup="this.value=formatarCPF(this.value)">
                 <span class="mensagem-erro" id="errorCPF"></span>
             </div>
     
-            <div class="form-grupo">
+            <div class="form-grupo" data-aos="fade-up" data-aos-delay="250">
                 <label for="sexo">Sexo:</label>
                 <select id="sexo" name="sexo" required>
                     <option value="" disabled selected>Selecione</option>
@@ -53,25 +53,25 @@
                 </select>
             </div>
               
-            <div class="form-grupo">
+            <div class="form-grupo" data-aos="fade-up" data-aos-delay="300">
                 <label for="email">E-mail:</label> 
                 <input type="email" id="email" name="email" value="" placeholder="name@gmail.com / name@hotmail.com" required>
                 <span class="mensagem-erro" id="errorEmail"></span>
             </div>
     
-            <div class="form-grupo">
+            <div class="form-grupo" data-aos="fade-up" data-aos-delay="350">
                 <label for="telefone">Telefone:</label>
                 <input type="tel" id="tel" name="telefone" value="" placeholder="(xx) x xxxx-xxxx" required maxlength="15">
                 <span class="mensagem-erro" id="errorTel"></span>
             </div>
     
-            <div class="form-grupo">
+            <div class="form-grupo" data-aos="fade-up" data-aos-delay="400">
                 <label for="senha">Senha:</label>
                 <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
                 <i id="toggleSenha" class="fa-regular fa-eye"></i>
             </div>
               
-            <div class="form-grupo">
+            <div class="form-grupo" data-aos="fade-up" data-aos-delay="450">
                 <label for="confirmarSenha">Confirme sua senha:</label>
                 <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirme sua senha" required>
                 <i id="toggleConfirmarSenha" class="fa-regular fa-eye"></i>
@@ -79,15 +79,15 @@
 
             <span class="mensagem-erro" id="errorSenha"></span>              
 
-            <div class="form-grupo">
+            <div class="form-grupo" data-aos="zoom-in" data-aos-delay="500">
                 <label for="documento">Documento de identidade:</label>
                 <div class="upload-box">
-                    <img src="img/cloud-upload.svg" alt="Upload">
+                    <img src="../img/cloud-upload.svg" alt="Upload">
                     <p>Clique aqui para selecionar o arquivo</p>
                 </div>
             </div>
 
-            <div class="form-grupo">
+            <div class="form-grupo" data-aos="fade-right" data-aos-delay="200">
                 <h2>Endereço Residencial</h2>
 
                 <label for="cep">CEP:</label>
@@ -96,7 +96,7 @@
             </div>
 
             <div class="form-grupo inline">
-                <div class="box-1">        
+                <div class="box-1" data-aos="fade-right" data-aos-delay="300">        
                     <label for="rua">Rua:</label>
                     <input type="text" id="rua" name="rua" value="" placeholder="RUA 01">
 
@@ -104,7 +104,7 @@
                     <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required onkeyup="this.value=formatarTexto(this.value)">
                 </div>
 
-                <div class="box-2">
+                <div class="box-2" data-aos="fade-left" data-aos-delay="400">
                     <label for="numero">Número:</label>
                     <input type="number" id="num" name="numero" placeholder="01">
 
@@ -142,60 +142,60 @@
                 </div>
             </div>
     
-            <div class="form-grupo">
+            <div class="form-grupo" data-aos="zoom-in" data-aos-delay="200">
                 <label for="comprovante">Comprovante de residência:</label>
                 <div class="upload-box">
-                    <img src="img/cloud-upload.svg" alt="Upload">
+                    <img src="../img/cloud-upload.svg" alt="Upload">
                     <p>Clique aqui para selecionar o arquivo</p>
                 </div>
             </div>
     
             <div class="form-grupo">
-                <h2>Trilhas de aprendizagem</h2>
+                <h2 data-aos="fade-right">Trilhas de aprendizagem</h2>
             
                 <div class="form-trilhas">            
-                    <label class="box">
-                        <img src="img/front-icon.svg" alt="Front-end">
+                    <label class="box" data-aos="flip-left" data-aos-delay="100">
+                        <img src="../img/front-icon.svg" alt="Front-end">
                         <h3>Programação Front-end</h3>
                         <input type="radio" id="front" name="curso" value="front">
                     </label>
 
-                    <label class="box"> 
-                        <img src="img/back-icon.svg" alt="Back-end">
+                    <label class="box" data-aos="flip-left" data-aos-delay="200"> 
+                        <img src="../img/back-icon.svg" alt="Back-end">
                         <h3>Programação Back-end</h3>
                         
                         <input type="radio" id="back" name="curso" value="back">
                     </label>
 
-                    <label class="box"> 
-                        <img src="img/icon-dados.svg" alt="dados">
+                    <label class="box" data-aos="flip-left" data-aos-delay="300"> 
+                        <img src="../img/icon-dados.svg" alt="dados">
                         <h3>Ciência de Dados</h3>  
                         <input type="radio" id="full" name="curso" value="dados">
                     </label>
 
-                    <label class="box"> 
-                        <img src="img/icon-game.svg" alt="jogos">
+                    <label class="box" data-aos="flip-left" data-aos-delay="400"> 
+                        <img src="../img/icon-game.svg" alt="jogos">
                         <h3>Programação de Jogos</h3>
                         <input type="radio" id="jogos" name="curso" value="jogos">
                     </label>
 
-                    <label class="box">
-                        <img src="img/ux-icon.svg" alt="UX  Design">
+                    <label class="box" data-aos="flip-left" data-aos-delay="500">
+                        <img src="../img/ux-icon.svg" alt="UX  Design">
                         <h3>Design e Experiência</h3>
                         <input type="radio" id="ux" name="curso" value="Ux">
                     </label>
                 </div>
             </div>
 
-            <div class="form-condicoes">
+            <div class="form-condicoes" data-aos="fade-up" data-aos-delay="200">
                 <input type="checkbox" name="termos" id="checkbox">
                 <label>
                     Declaro que li e concordo com os <span>Termos e Condições</span> e com a <span>Politica de Privacidade.</span>
                 </label>
             </div>
 
-            <div class="buttons">
-                <button type="reset" onclick="window.location.href='index.html'">Cancelar</button>
+            <div class="buttons" data-aos="fade-up" data-aos-delay="300">
+                <button type="reset" onclick="window.location.href='../index.html' ">Cancelar</button>
                 <button type="submit" id="inscrever">Fazer Inscrição</button>
             </div>
             
@@ -204,12 +204,16 @@
 
     </section>
 
-    <section class="box-img">
-        <img src="img/Ilustration.svg" alt="Ilustração de uma pessoa programando">
-        <img src="img/logo-trilhas-inova.svg" alt="Logo do Trilhas">
+    <section class="box-img" data-aos="fade-left">
+        <img src="../img/Ilustration.svg" alt="Ilustração de uma pessoa programando">
+        <img src="../img/logo-trilhas-inova.svg" alt="Logo do Trilhas">
     </section>
 
     <script src="https://kit.fontawesome.com/091f30ca3a.js" crossorigin="anonymous"></script>
-    <script src="js/cadastro.js"></script>
+    <script src="../js/cadastro.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
